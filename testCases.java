@@ -12,7 +12,7 @@ public class testCases {
  
  System.setProperty("webdriver.chrome.driver", "---Exact path to chromedriver.exe---");
  WebDriver driver = new ChromeDriver();
-
+ driver.get("https://www.demoqa.com/books");
  
  //Creating object of home page
 AmazonPage home = new HomePage(driver);
@@ -32,12 +32,10 @@ Compare dashboard = new Compare(driver);
 			String PRODUCT = searchString;
 			WebDriver driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.get("https://www.flipkart.com/"");
-                        driver.get("https://www.amazon.com/"");
- 
+			driver.get("https://ca.ingrammicro.com/");//difference btw and naviogate/get
  
 			//Checkpoint
-			String expected_title = "iphone xr 64gb - yellow";
+			String expected_title = "Computer and Technology Products - Services for Business to Business Needs - Ingram Micro";
 			String actual_title = driver.getTitle();
 			Assert.assertEquals(actual_title, expected_title, "Title is correct");
  
